@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="">Logo</a></div>
+    </header>
+    <main class="homepage-main">
+        <article class="posts-container">
+            <div class="post-container">
+                <div class="post-author">Post Author</div>
+                <div class="left-post-subcontainer">
+                    <a href=""><img src="" alt="Post Image"></a>
+                    <div class="interactions">
+                        <i class="like-icon"></i><span>100</span>
+                        <i class="dislike-icon"></i><span>100</span>
+                        <i class="comments-icon"></i><span>100</span>
+                    </div>
+                </div>
+                <div class="right-post-subcontainer">
+                    <h3 class="post-title">Post Title</h3>
+                    <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </article>
+        <aside class="sidebar">
+            <nav class="sidebar-nav-topics">
+                <ul>
+                    <li><i></i><a href="">Home</a></li>
+                    <li><a href="">Tags</a></li>
+                    <li><a href="">People</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <a href="">About</a>
+                <a href="">Contact us</a>
+                <a href="">Terms of use</a>
+                <a href="">Privacy Policy</a>
+            </footer>
+        </aside>
+    </main>
+</body>
+</html>
