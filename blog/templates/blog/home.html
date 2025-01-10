@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="">Logo</a></div>
+        <a class="logo" href="">Logo</a>
+        <form action="/" method="GET" class="search-form">
+            <input type="search">
+            <button type="submit"></button>
+        </form>
     </header>
     <main class="homepage-main">
         <article class="posts-container">
@@ -18,14 +22,18 @@
                 <div class="left-post-subcontainer">
                     <a href=""><img src="" alt="Post Image"></a>
                     <div class="interactions">
-                        <i class="like-icon"></i><span>100</span>
-                        <i class="dislike-icon"></i><span>100</span>
-                        <i class="comments-icon"></i><span>100</span>
+                        <button class="like-btn">10</button>
+                        <button class="dislike-btn">10</button>
+                        <a class="comments-link">10</a>
                     </div>
                 </div>
                 <div class="right-post-subcontainer">
                     <h3 class="post-title">Post Title</h3>
                     <p class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="post-options-container">
+                        <button type="button" class="post-options-btn">...</span>
+                        <button class="save-post-btn">Save</span>
+                    </div>
                 </div>
             </div>
         </article>
