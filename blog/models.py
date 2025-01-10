@@ -13,15 +13,15 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=100, blank=False)
     description = models.CharField(max_length=200, blank=True, default="")
-    creation_date = models.DateTimeField(default=timezone.now)
-    update_date = models.DateTimeField(null=True, blank=True, default=None)
+    creation_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
     cover_image = models.ImageField(upload_to="", blank=True, default="") # TODO: create image directories
     post_text = models.TextField() # TODO: decide how to store text of post
     tags = models.ManyToManyField(Tag, through="Tag_In_Post")
     users_reactions = models.ManyToManyField(
         User, 
         through="Post_Reaction",
-        related_name="post_users_reactions", # TODO: does this make sense?
+        related_name="post_user_reactions",
     )
     
     def __str__(self):
@@ -54,12 +54,12 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     responded_comment = models.ForeignKey("self", on_delete=models.CASCADE, null=True, default=None)
     text = models.CharField(max_length=5000)
-    creation_date = models.DateTimeField(default=timezone.now)
-    update_date = models.DateTimeField(null=True, default=None)
+    creation_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now=True)
     users_reactions = models.ManyToManyField(
         User, 
         through="Comment_Reaction",
-        related_name="comment_users_reactions", # TODO: does this make sense?
+        related_name="comment_user_reactions",
     )
 
     def __str__(self):
