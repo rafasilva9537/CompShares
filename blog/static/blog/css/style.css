@@ -6,8 +6,89 @@
     --accent: #2C22C8;
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_opsz,wght.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inter;
+    color: var(--text);
+}
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    
+}
+
+.homepage-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.8rem;
+}
+
+.posts-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-container {
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    width: 70%;
+}
+
+.post-author {
+    border-bottom: 2px solid var(--secondary);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.post-subcontainer {
+    display: flex;
+    padding: 1rem;
+}
+
+.left-post-subcontainer {
+    width: 40%;
+}
+
+.right-post-subcontainer {
+    width: 60%;
+    margin-left: 1rem;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.sidebar {
+    width: 20%;
+}
+
+.sidebar-nav-topics ul {
+    list-style: none;
 }
