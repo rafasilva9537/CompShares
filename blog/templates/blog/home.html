@@ -11,11 +11,13 @@
     <header>
         <a class="logo" href="">Logo</a>
         <form action="/" method="GET" class="search-form">
-            <input type="search">
-            <button type="submit"><img src=""></button>
+            <input type="search" class="search-input" placeholder="Search...">
+            <button type="submit" class="search-button"><img src="{% static 'blog/icons/search.svg' %}" alt="search button"></button>
         </form>
-        <button class="notification-btn"></button>
-        <button class="avatar-btn"></button>
+        <div class="user-container">
+            <button class="notification-button"><img src="{% static 'blog/icons/bell-notification.svg' %}" alt="notification-icon"></button>
+            <button class="profile-button"><img src="{% static 'blog/icons/profile-circle.svg' %}" alt="profile-icon"></button>
+        </div>
     </header>
     <main class="homepage-main">
         <article class="posts-container">
@@ -33,13 +35,13 @@
                 </div>
                 <div class="post-interactions">
                     <span class="post-reactions-container">
-                        <button class="like-btn"><img src="{% static 'blog/icons/thumbs-up.svg' %}" alt="like button"></button>
-                        <button class="dislike-btn"><img src="{% static 'blog/icons/thumbs-down.svg' %}" alt="dislike button"></button>
+                        <button class="like-button"><img src="{% static 'blog/icons/thumbs-up.svg' %}" alt="like button"></button>
+                        <button class="dislike-button"><img src="{% static 'blog/icons/thumbs-down.svg' %}" alt="dislike button"></button>
                         <a class="comments-link" alt="comment bubble"><img src="{% static 'blog/icons/chat-bubble-empty.svg' %}"></a>
                     </span>
                     <span class="post-options-container">
-                        <button type="button" class="post-options-btn"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
-                        <button class="save-post-btn"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
+                        <button type="button" class="post-options-button"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
+                        <button class="save-post-button"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
                     </span>
                 </div>
             </div>

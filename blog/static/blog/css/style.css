@@ -28,13 +28,53 @@ body {
 }
 
 header {
-    
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > *, .search-form > *, .user-container > * {
+    font-size: 1.2rem;
+}
+
+.logo {
+
+}
+
+.search-form {
+    position: relative;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 25px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    position: absolute;
+    padding: 0.5em;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
+
+.user-container button {
+    background: none;
+    border: none;
 }
 
 .homepage-main {
     display: flex;
     flex-wrap: wrap;
-    margin: 0.8rem;
+    padding: 1.5rem;
 }
 
 .posts-container {
@@ -84,8 +124,8 @@ header {
     border: none;
 }
 
-.like-btn {
-    
+.like-button {
+
 }
 
 .post-image {
