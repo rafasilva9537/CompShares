@@ -7,7 +7,7 @@ from utils.fake_blogs import create_fake_blog
 # Create your views here.
 def home(request):
     # posts = Post.objects.order_by("-id")[:6]
-    posts = [ create_fake_blog() for _ in range(8)]
+    posts = [ create_fake_blog() for _ in range(7)]
 
     return render(request, "blog/home.html", {"posts": posts})
 

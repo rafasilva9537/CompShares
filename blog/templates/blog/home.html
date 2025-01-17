@@ -30,7 +30,7 @@
                     </div>
                     <div class="right-post-subcontainer">
                         <h3 class="post-title">{{ post.title }}</h3>
-                        <p class="post-description"> {{ post.description }}</p>
+                        <p class="post-description"> {{ post.description|truncatechars:100 }}</p>
                     </div>
                 </div>
                 <div class="post-interactions">

@@ -32,6 +32,9 @@ header {
     padding: 1.5rem;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
 }
 
 header > *, .search-form > *, .user-container > * {
@@ -60,9 +63,6 @@ header > *, .search-form > *, .user-container > * {
     right: 0;
     bottom: 0;
     top: 0;
-}
-
-.search-button:hover {
     cursor: pointer;
 }
 
@@ -71,29 +71,46 @@ header > *, .search-form > *, .user-container > * {
     border: none;
 }
 
+.user-container img {
+    width: 2rem;
+    cursor: pointer;
+}
+
 .homepage-main {
     display: flex;
     flex-wrap: wrap;
     padding: 1.5rem;
+    gap: 80px;
 }
 
 .posts-container {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
 .post-container {
     border: 2px solid var(--secondary);
     border-radius: 15px;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.post-interactions {
+    margin-top: auto;
+}
+
+.post-interactions img {
+    cursor: pointer;
 }
 
 .post-author {
     border-bottom: 2px solid var(--secondary);
     padding: 0.5rem;
     text-align: center;
+    background-color: var(--accent);
 }
 
 .post-subcontainer {
@@ -136,6 +153,20 @@ header > *, .search-form > *, .user-container > * {
     width: 20%;
 }
 
+.sidebar {
+
+}
+
 .sidebar-nav-topics ul {
     list-style: none;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav-topics li {
+    font-size: 2rem;
+}
+
+footer {
+    padding-top: 1rem;
+    border-top: 1px solid var(--secondary);
 }
