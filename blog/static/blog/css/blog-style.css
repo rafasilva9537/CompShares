@@ -51,7 +51,7 @@ header > *, .search-form > *, .user-container > * {
     cursor: pointer;
 }
 
-.homepage-main {
+.main-page {
     display: flex;
     flex-wrap: wrap;
     padding: 1.5rem;

@@ -1,0 +1,49 @@
+{% extends "blog/bases/base.html" %}
+{% load static %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<article class="posts-container">
+    {% for post in posts %}
+    <div class="post-container">
+        <div class="post-author"><h5>{{ post.user.first_name }} {{ post.user.last_name }}</h5></div>
+        <div class="post-subcontainer">
+            <div class="left-post-subcontainer">
+                <a class="post-image-link" href=""><img class="post-image" src="{% static 'blog/images/image-test.jpeg' %}" alt="Post Image"></a>
+            </div>
+            <div class="right-post-subcontainer">
+                <h3 class="post-title">{{ post.title }}</h3>
+                <p class="post-description"> {{ post.description|truncatechars:100 }}</p>
+            </div>
+        </div>
+        <div class="post-interactions">
+            <span class="post-reactions-container">
+                <button class="like-button"><img src="{% static 'blog/icons/thumbs-up.svg' %}" alt="like button"></button>
+                <button class="dislike-button"><img src="{% static 'blog/icons/thumbs-down.svg' %}" alt="dislike button"></button>
+                <a class="comments-link" alt="comment bubble"><img src="{% static 'blog/icons/chat-bubble-empty.svg' %}"></a>
+            </span>
+            <span class="post-options-container">
+                <button type="button" class="post-options-button"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
+                <button class="save-post-button"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</article>
+<aside class="sidebar">
+    <nav class="sidebar-nav-topics">
+        <ul>
+            <li><i></i><a href="">Home</a></li>
+            <li><a href="">Tags</a></li>
+            <li><a href="">People</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <a href="">About</a>
+        <a href="">Contact us</a>
+        <a href="">Terms of use</a>
+        <a href="">Privacy Policy</a>
+    </footer>
+</aside>
+{% endblock %}
