@@ -1,4 +1,4 @@
-{% extends "global/base.html" %}
+{% extends "global/bases/base-site.html" %}
 {% load static %}
 
 {% block local-style %}
@@ -10,26 +10,26 @@
 {% block content %}
 <article class="posts-container">
     {% for post in posts %}
-    <div class="post-container">
-        <div class="post-author"><h5>{{ post.user.first_name }} {{ post.user.last_name }}</h5></div>
-        <div class="post-subcontainer">
-            <div class="left-post-subcontainer">
-                <a class="post-image-link" href=""><img class="post-image" src="{% static 'blog/images/image-test.jpeg' %}" alt="Post Image"></a>
+    <div class="minipost-container">
+        <div class="minipost-author"><h5>{{ post.user.first_name }} {{ post.user.last_name }}</h5></div>
+        <div class="minipost-subcontainer">
+            <div class="left-minipost-subcontainer">
+                <a class="minipost-image-link" href=""><img class="minipost-image" src="{% static 'blog/images/image-test.jpeg' %}" alt="Post Image"></a>
             </div>
-            <div class="right-post-subcontainer">
-                <h3 class="post-title">{{ post.title }}</h3>
-                <p class="post-description"> {{ post.description|truncatechars:100 }}</p>
+            <div class="right-minipost-subcontainer">
+                <h3 class="minipost-title">{{ post.title }}</h3>
+                <p class="minipost-description"> {{ post.description|truncatechars:100 }}</p>
             </div>
         </div>
-        <div class="post-interactions">
-            <span class="post-reactions-container">
+        <div class="minipost-interactions">
+            <span class="minipost-reactions-container">
                 <button class="like-button"><img src="{% static 'blog/icons/thumbs-up.svg' %}" alt="like button"></button>
                 <button class="dislike-button"><img src="{% static 'blog/icons/thumbs-down.svg' %}" alt="dislike button"></button>
                 <a class="comments-link" alt="comment bubble"><img src="{% static 'blog/icons/chat-bubble-empty.svg' %}"></a>
             </span>
-            <span class="post-options-container">
-                <button type="button" class="post-options-button"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
-                <button class="save-post-button"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
+            <span class="minipost-options-container">
+                <button type="button" class="minipost-options-button"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
+                <button class="save-minipost-button"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
             </span>
         </div>
     </div>

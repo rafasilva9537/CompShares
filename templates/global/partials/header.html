@@ -1,0 +1,12 @@
+{% load static %}
+<header>
+    <a class="logo" href="">Logo</a>
+    <form action="/" method="GET" class="search-form">
+        <input type="search" class="search-input" placeholder="Search...">
+        <button type="submit" class="search-button"><img src="{% static 'global/icons/search.svg' %}" alt="search button"></button>
+    </form>
+    <div class="user-container">
+        <button class="notification-button"><img src="{% static 'global/icons/bell-notification.svg' %}" alt="notification-icon"></button>
+        <button class="profile-button"><img src="{% static 'global/icons/profile-circle.svg' %}" alt="profile-icon"></button>
+    </div>
+</header>

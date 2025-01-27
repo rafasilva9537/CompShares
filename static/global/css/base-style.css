@@ -22,3 +22,57 @@
 a {
     text-decoration: none;
 }
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
+}
+
+header > *, .search-form > *, .user-container > * {
+    font-size: 1.2rem;
+}
+
+.logo {
+
+}
+
+/* TODO: remove X button from search bar */
+.search-form {
+    position: relative;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid var(--secondary);
+    border-radius: 25px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    position: absolute;
+    padding: 0.5em;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.user-container button {
+    background: none;
+    border: none;
+}
+
+.user-container img {
+    width: 2rem;
+    cursor: pointer;
+}

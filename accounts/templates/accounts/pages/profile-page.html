@@ -1,0 +1,29 @@
+{% extends "global/bases/base-site.html" %}
+{% load static %}
+
+{% block local-style %} 
+<link rel="stylesheet" href="{% static 'accounts/css/profile-style.css' %}"> 
+{% endblock %}
+
+{% block content %}
+<article class="profile-page-container">
+    <div class="profile-info">
+        <img src="{% static 'accounts/images/starry-sky.jpeg' %}" alt="Background image" class="background-img">
+        <div class="profile-follows-container">
+            <img src="{% static 'accounts/images/cool-chicken.jpg' %}" alt="Profile photo" class="profile-img">
+            <span class="follows-container">            
+                <span><b>1.4k</b> Followers</span>
+                <span><b>236</b> Following</span>
+            </span>
+        </div>
+        <div class="profile-text-info">
+            <h1 class="profile-username">Username</h1>
+            <p class="profile-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus cupiditate similique ab, quae consequatur quod ad numquam corrupti quis voluptas dolorum eius minima quo ullam eaque optio, totam veritatis explicabo.</p>
+        </div>
+    </div>
+    <!-- TODO: add and style post containers -->
+    <article class="posts-container">
+        <div class="minipost-container"></div>
+    </article>
+</article>
+{% endblock %}
