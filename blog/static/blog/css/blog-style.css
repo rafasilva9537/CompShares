@@ -20,6 +20,7 @@ header > *, .search-form > *, .user-container > * {
 
 }
 
+/* TODO: remove X button from search bar */
 .search-form {
     position: relative;
 }
