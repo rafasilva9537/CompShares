@@ -41,10 +41,6 @@ header > *, .search-form > *, .user-container > * {
     font-size: 1.2rem;
 }
 
-.logo {
-
-}
-
 /* TODO: remove X button from search bar */
 .search-form {
     position: relative;
