@@ -1,8 +1,39 @@
 {% extends "global/bases/base-site.html" %}
 {% load static %}
 
+{% block local-style %}
+<link rel="stylesheet" href="{% static 'blog/css/blog-style.css' %}">
+{% endblock %}
+
+{% block title %}{{ post.title }} - CompShares{% endblock %}
+
 {% block content %}
 <article class="post">
-    <h1>{{ post.title }}<h1>
+    <h1 class="post-title">{{ post.title }}</h1>
+    <p1 class="post-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis optio excepturi veritatis recusandae? Iure quidem illo iste nulla harum consequatur.</p1>
+    <div class="post-interactions">
+        <span class="post-reactions-container post-interactions-subcontainer">
+            <button class="like-button"><img src="{% static 'blog/icons/thumbs-up.svg' %}" alt="like button"></button>
+            <span class="like-count">40</span>
+            <button class="dislike-button"><img src="{% static 'blog/icons/thumbs-down.svg' %}" alt="dislike button"></button>
+            <span class="dislike-count">3</span>
+        </span>
+        <span class="post-options-container post-interactions-subcontainer">
+            <button type="button" class="post-options-button"><img src="{% static 'blog/icons/more-horiz-circle.svg' %}"></span>
+            <button class="save-post-button"><img src="{% static 'blog/icons/bookmark.svg' %}"></span>
+        </span>
+    </div>
+    <div class="post-user-info">
+        <div class="post-user-icon"><img src="{% static 'global/icons/profile-circle.svg' %}" alt="profile-icon">
+        </div>
+        <div class="post-username-date">
+            <span class="post-username">Username</span>
+            <span class="post-date">Posted in Jan 28</span>
+        </div>
+    </div>
+    <!-- Markdown block -->
+    <article class="post-text-container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic adipisci, consectetur esse aspernatur dignissimos dolore error eligendi obcaecati exercitationem corrupti excepturi, suscipit accusantium sapiente perferendis, fuga commodi delectus assumenda. Ex voluptatibus, distinctio recusandae dicta, id amet doloribus esse fugit placeat provident saepe doloremque ducimus quaerat fuga odio architecto nemo, dolorem nam. Eaque dicta, quos ipsa itaque ad perferendis aspernatur harum rem dolor ducimus modi, praesentium voluptatibus voluptas similique quisquam accusantium culpa corporis molestias nesciunt facere eveniet veniam vitae? Delectus vel repudiandae, sed cum sint quo architecto, maiores temporibus, mollitia perspiciatis id. Esse iusto rem ullam a repudiandae quibusdam quisquam quasi corrupti, ut repellat fuga adipisci placeat architecto, qui quod natus aliquam. Autem ratione, vero sequi soluta, doloremque totam similique officia iure, officiis placeat amet. Maxime odit dicta possimus eveniet ipsam cum iusto laudantium, cupiditate assumenda dolores aliquam veritatis, aspernatur aperiam aut ut accusamus corporis maiores esse tempore? Perspiciatis, recusandae? Minus quam sunt, ea odio modi laudantium possimus pariatur? Porro ducimus dolorum necessitatibus doloremque natus est fuga animi, alias amet sit quisquam? Corporis, explicabo pariatur vero quis fugit ipsam atque. Aspernatur voluptas voluptatibus similique ipsum culpa nisi non dignissimos in assumenda, quibusdam, iusto, laudantium quam labore magnam. Rerum iste maxime nam dicta reiciendis dignissimos optio, eos modi at? Tempore animi, natus dolores porro qui, adipisci dicta accusamus aliquam quidem ratione assumenda totam cum a. Sapiente, nemo quibusdam, reprehenderit nulla harum blanditiis repudiandae et omnis aliquid natus perspiciatis sit, facilis pariatur vitae unde eaque est ipsum repellendus neque quae. Laboriosam quas nostrum, dolore magni facere vero, architecto quaerat illum accusantium assumenda nihil quibusdam aspernatur maiores vel? Vel quia quaerat, assumenda atque cumque neque nisi hic distinctio porro numquam sapiente ratione aliquid nostrum voluptatum odit voluptas voluptatem corrupti laborum, praesentium ducimus magnam iure enim. Obcaecati quisquam sequi suscipit error molestiae at officia provident, soluta ullam voluptas natus itaque fugit ipsa velit! Harum excepturi blanditiis alias, fugiat possimus omnis a! Libero debitis optio nobis harum explicabo enim blanditiis neque similique corporis illo impedit error incidunt, iusto repellendus, mollitia sit ducimus excepturi quo quis quidem est aspernatur beatae. Laboriosam, exercitationem ab! Provident ullam voluptate ea, quas delectus aliquam suscipit voluptates tempora recusandae consequuntur at culpa enim natus impedit in veritatis veniam animi nam, illum fugiat fugit? Neque aspernatur impedit iure distinctio ipsum atque repellat ipsa ut nulla modi sequi, omnis animi, excepturi maxime molestias dolores qui sit nostrum provident est ratione blanditiis! Repudiandae, placeat hic?</p>
+    </article>
 <article>
 {% endblock %}

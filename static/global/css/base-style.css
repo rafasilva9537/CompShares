@@ -1,9 +1,10 @@
 :root {
-    --text: #e9f0f1;
-    --background: #05051E;
-    --primary: #93d5e0;
-    --secondary: #41475e;
-    --accent: #2C22C8;
+    --text: hsl(187, 22%, 93%);
+    --text-negative: hsl(187, 22%, 0%);
+    --background: hsl(240, 71%, 13%);
+    --primary: hsl(189, 55%, 73%);
+    --secondary: hsl(228, 18%, 31%);
+    --accent: hsl(244, 71%, 46%);
 }
 
 @font-face {
@@ -44,12 +45,15 @@ header > *, .search-form > *, .user-container > * {
 /* TODO: remove X button from search bar */
 .search-form {
     position: relative;
+    width: 35%;
 }
 
 .search-input {
     padding: 0.5rem;
     border: 1px solid var(--secondary);
     border-radius: 25px;
+    color: var(--text-negative);
+    width: 100%;
 }
 
 .search-button {
