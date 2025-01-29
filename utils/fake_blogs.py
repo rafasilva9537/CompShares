@@ -21,7 +21,7 @@ def create_fake_blog() -> dict:
         "creation_date": creation_date,
         "upadte_date": update_date,
         "cover_image" : "blog/images/image-test.jpeg",
-        "post_text": faker.sentence(400),
+        "text": faker.sentence(400),
         "tags": [ { "name": faker.word() } for _ in range(randint(2, 5))],
         "users_reactions": [ { "is_liked": choice([True, False]) } for _ in range(randint(0, 150))]
     }
