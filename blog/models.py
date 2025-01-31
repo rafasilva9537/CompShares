@@ -16,7 +16,7 @@ class Post(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     cover_image = models.ImageField(upload_to="", blank=True, default="") # TODO: create image directories
-    text = models.TextField() # markdown text
+    post_text = models.TextField() # markdown text
     tags = models.ManyToManyField(Tag, through="Tag_In_Post")
     users_reactions = models.ManyToManyField(
         User, 

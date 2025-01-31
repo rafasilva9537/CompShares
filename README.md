@@ -1,6 +1,6 @@
 # CompShares
-Website publishg plataform focused in computer science related topics. <br>
-Users can create posts using a markdown-based editor, interact with others by comments in post or follow feature and use basic blog features like search 
+Website publishg plataform focused on computer science related topics. <br>
+It allows users to create, edit and delete posts using a markdown-based editor. Users can interact with content by commenting on posts, following other users, and searching for posts.
 
 ## Features
 Building ...
